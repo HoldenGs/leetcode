@@ -5,15 +5,15 @@ class ListNode:
 
 
 def hasCycle(head: Optional[ListNode]) -> bool:
-        fast = head
-        slow = head
-        while fast and slow:
-            fast = fast.next
-            if fast == slow and fast != None:
-                return True
-            
-            slow = slow.next
-            if fast != None:
-                fast = fast.next
+    fast = head
+    slow = head
+    while fast and slow:
+        fast = fast.next
+        if fast == slow and fast != None:
+            return True
         
-        return False
+        slow = slow.next
+        if fast != None:
+            fast = fast.next
+    
+    return False
